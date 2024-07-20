@@ -1,0 +1,46 @@
+{
+  "name": "test-nextjs-rnr",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@expo/next-adapter": "^6.0.0",
+    "@react-native-async-storage/async-storage": "^1.24.0",
+    "@rn-primitives/dropdown-menu": "^1.0.3",
+    "@rn-primitives/hooks": "^1.0.3",
+    "@rn-primitives/portal": "^1.0.3",
+    "@rn-primitives/select": "^1.0.3",
+    "@rn-primitives/slot": "^1.0.3",
+    "@rn-primitives/types": "^1.0.3",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "lucide-react-native": "^0.412.0",
+    "nativewind": "^4.0.36",
+    "next": "14.2.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-native": "^0.74.3",
+    "react-native-reanimated": "^3.14.0",
+    "react-native-svg": "^15.4.0",
+    "react-native-web": "^0.19.12",
+    "tailwind-merge": "^2.4.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.19",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5",
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.6",
+    "typescript": "^5"
+  },
+  "packageManager": "yarn@4.1.1"
+}
