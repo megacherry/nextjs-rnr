@@ -1,31 +1,6 @@
-import Head from "next/head"
-import Image from "next/image"
-import { Inter } from "next/font/google"
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "~/components/ui/select"
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuShortcut,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
-  DropdownMenuTrigger,
-} from "~/components/ui/dropdown-menu"
-import { Text } from "@/components/ui/text"
-import { Button } from "@/components/ui/button"
-import Animated, { FadeIn } from "react-native-reanimated"
+import Head from "next/head";
+import { Text } from "@/components/ui/text";
+import { View } from "react-native";
 
 export default function Home() {
   return (
@@ -38,90 +13,11 @@ export default function Home() {
       </Head>
       <main>
         <div className="p-4 flex flex-row gap-4">
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="outline">
-                <Text>Open</Text>
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-64 native:w-72">
-              <DropdownMenuLabel>My Account</DropdownMenuLabel>
-              <DropdownMenuSeparator />
-              <DropdownMenuGroup>
-                <DropdownMenuItem>
-                  <Text>Team</Text>
-                </DropdownMenuItem>
-                <DropdownMenuSub>
-                  <DropdownMenuSubTrigger>
-                    <Text>Invite users</Text>
-                  </DropdownMenuSubTrigger>
-                  <DropdownMenuSubContent>
-                    <Animated.View entering={FadeIn.duration(200)}>
-                      <DropdownMenuItem>
-                        <Text>Email</Text>
-                      </DropdownMenuItem>
-                      <DropdownMenuItem>
-                        <Text>Message</Text>
-                      </DropdownMenuItem>
-                      <DropdownMenuSeparator />
-                      <DropdownMenuItem>
-                        <Text>More...</Text>
-                      </DropdownMenuItem>
-                    </Animated.View>
-                  </DropdownMenuSubContent>
-                </DropdownMenuSub>
-                <DropdownMenuItem>
-                  <Text>New Team</Text>
-                  <DropdownMenuShortcut>⌘+T</DropdownMenuShortcut>
-                </DropdownMenuItem>
-              </DropdownMenuGroup>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem>
-                <Text>GitHub</Text>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Text>Support</Text>
-              </DropdownMenuItem>
-              <DropdownMenuItem disabled>
-                <Text>API</Text>
-              </DropdownMenuItem>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem>
-                <Text>Log out</Text>
-                <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-          <Select defaultValue={{ value: "apple", label: "Apple" }}>
-            <SelectTrigger className="w-[250px]">
-              <SelectValue
-                className="text-foreground text-sm native:text-lg"
-                placeholder="Select a fruit"
-              />
-            </SelectTrigger>
-            <SelectContent className="w-[250px]">
-              <SelectGroup>
-                <SelectLabel>Fruits</SelectLabel>
-                <SelectItem label="Apple" value="apple">
-                  Apple
-                </SelectItem>
-                <SelectItem label="Banana" value="banana">
-                  Banana
-                </SelectItem>
-                <SelectItem label="Blueberry" value="blueberry">
-                  Blueberry
-                </SelectItem>
-                <SelectItem label="Grapes" value="grapes">
-                  Grapes
-                </SelectItem>
-                <SelectItem label="Pineapple" value="pineapple">
-                  Pineapple
-                </SelectItem>
-              </SelectGroup>
-            </SelectContent>
-          </Select>
+          <View className="p-4 rounded-md border">
+            <Text>This border should not be black.</Text>
+          </View>
         </div>
       </main>
     </>
-  )
+  );
 }
